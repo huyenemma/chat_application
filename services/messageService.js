@@ -1,4 +1,4 @@
-import { postgres } from "../deps.js";
+
 import sql from "../databases/database.js"
 
 const getMessage = async () => {
