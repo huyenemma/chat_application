@@ -1,6 +1,5 @@
-import postgres from "https://deno.land/x/postgresjs@v3.3.3/mod.js";
-
-const sql = postgres({});
+import { postgres } from "../deps";
+import sql from "../databases/database.js"
 
 const getMessage = async () => {
     return await sql`SELECT * FROM messages ORDER BY id DESC LIMIT 5`;
