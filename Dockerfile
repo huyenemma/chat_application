@@ -8,4 +8,4 @@ COPY . .
 
 RUN deno cache app.js
 
-CMD [ "run", "--allow-net", "--watch", "--unstable", "app.js" ]
+CMD [ "run", "--allow-net", "--allow-env", "--allow-read" ,"--watch", "--unstable", "app.js" ]
