@@ -1,5 +1,4 @@
-
-import sql from "../databases/database.js"
+import { sql } from "../databases/database.js"
 
 const getMessage = async () => {
     return await sql`SELECT * FROM messages ORDER BY id DESC LIMIT 5`;
