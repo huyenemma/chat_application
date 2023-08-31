@@ -1,5 +1,10 @@
-import postgres from "https://deno.land/x/postgresjs@v3.3.3/mod.js";
+import { postgres } from "../deps.js";
 
-const sql = postgres({});
+let sql;
+if (Deno.env.get("db_url")) {
+  sql = postgres(Deno.env.get("DATABASE_URL"));
+} else {
+  sql = postgres({});
+}
 
 export { sql };
